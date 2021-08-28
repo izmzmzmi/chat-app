@@ -10,38 +10,7 @@
 </div>
 
 <div class="chat-contents">
-  <div class="c-content">
-    <div class="c-content-info">
-      <div class="c-content-user">
-        Hero
-      </div>
-      <div class="c-content-date">
-        2021/8/25(Wed)
-      </div>
-    </div>
-    <div class="c-content-nakami">
-      <div class="c-content-message">
-       Good morning.
-      </div>
-    </div>
-  </div>
-
-  <div class="c-content">
-    <div class="c-content-info">
-      <div class="c-content-user">
-        MA
-      </div>
-      <div class="c-content-date">
-        2021/8/25(Wed)
-      </div>
-    </div>
-    <div class="c-content-nakami">
-      <div class="c-content-message">
-       Good night.
-      </div>
-    </div>
-  </div>
-
+  <%= render partial: 'message', collection: @messages %>
 </div>
 
 <%= form_with model: [@room, @message], class: "chat-form", local: true do |f| %>
